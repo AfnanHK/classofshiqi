@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
+
+    <!-- Open Graph (agar ada gambar saat link dishare) -->
+    <!-- HTML Meta Tags -->
+    <title>XII TKJ 5</title>
+    <meta name="description" content="Website Kelas XII TKJ 5">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://www.classofshiqi.web.id">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="XII TKJ 5">
+    <meta property="og:description" content="Website Kelas XII TKJ 5">
+    <meta property="og:image"
+        content="https://opengraph.b-cdn.net/production/images/76feac90-81fe-46c1-830f-06068d419358.png?token=p9jdifnHhh8l8oDiKesHQ5_WirHsLlXzSg3SHEa2WlI&height=630&width=1200&expires=33298253954">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="classofshiqi.web.id">
+    <meta property="twitter:url" content="https://www.classofshiqi.web.id">
+    <meta name="twitter:title" content="XII TKJ 5">
+    <meta name="twitter:description" content="Website Kelas XII TKJ 5">
+    <meta name="twitter:image"
+        content="https://opengraph.b-cdn.net/production/images/76feac90-81fe-46c1-830f-06068d419358.png?token=p9jdifnHhh8l8oDiKesHQ5_WirHsLlXzSg3SHEa2WlI&height=630&width=1200&expires=33298253954">
+
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    <!-- Untuk WhatsApp & Browser -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.classofshiqi.web.id/assets/preview.jpg">
+</head>
+
+<body class="bg-red-50 text-gray-900 font-sans overflow-x-hidden">
+
+    <header class="fixed w-full shadow z-50 bg-red-800">
+        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold text-yellow-400">十二 TKJ 五</h1>
+
+            <nav class="space-x-4 md:block">
+                <a href="#home" class="text-white hover:text-yellow-300">Beranda</a>
+                <a href="#about" class="text-white hover:text-yellow-300">Tentang</a>
+                <a href="#members" class="text-white hover:text-yellow-300">Anggota</a>
+                <a href="#schedule" class="text-white hover:text-yellow-300">Jadwal</a>
+                <a href="#gallery" class="text-white hover:text-yellow-300">Galeri</a>
+                <a href="#contact" class="text-white hover:text-yellow-300">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home"
+        class="h-screen flex items-center justify-center text-center relative bg-cover bg-center scroll-mt-38"
+        style="background-image: url('assets/bg.jpg');">
+        <div class="bg-black bg-opacity-60 p-10 rounded-lg text-white relative z-10">
+            <h2 class="text-4xl font-bold mb-4">Selamat Datang di XII TKJ 5</h2>
+            <p class="text-lg mb-6 italic">“Semangat Seperti Naga, Bersinar Seperti Emas”</p>
+            <a href="#about"
+                class="bg-yellow-400 hover:bg-yellow-500 text-red-800 hover:text-white font-semibold px-6 py-3 rounded-lg">Mulai
+                Jelajahi</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 max-w-6xl mx-auto px-6 reveal scroll-mt-38">
+        <h2 class="text-3xl font-bold text-center mb-6">📘 Tentang Kelas</h2>
+        <p class="text-center text-lg leading-relaxed">
+            Kelas <b>XII TKJ 5</b> SMK Harapan Bangsa berisi 31 siswa yang semangat, disiplin, dan kompak.
+        <p class="text-center text-lg leading-relaxed">Dipimpin oleh wali kelas <b>Ibu Tria Maulida Sari, S.Kom</b>.
+            Moto kami: <i>"Belajar, Berkarya, dan Menginspirasi!"</i>
+        </p>
+    </section>
+
+    <section id="members" class="py-10 bg-red-100 reveal scroll-mt-38">
+        <h2 class="text-3xl font-bold text-center mb-10">👥 Anggota Kelas</h2>
+
+        <div class="wali-kelas-container max-w-5xl mx-auto mb-10">
+            <div class="wali-kelas">
+                <div class="member-card text-center p-4 rounded-lg wali-card">
+                    <h3 class="font-semibold">Ibu Tria Maulida Sari, S.Kom</h3>
+                    <p class="text-sm text-gray-700">Wali Kelas</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Adi Bastian</h3>
+                <p class="text-sm text-gray-700">Ketua Kelas</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Ahmad Rafa Ijlali</h3>
+                <p class="text-sm text-gray-700">Wakil Ketua</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Fatimah Fadlun Zahira</h3>
+                <p class="text-sm text-gray-700">Sekretaris 1</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Muhammad Rio F.</h3>
+                <p class="text-sm text-gray-700">Sekretaris 2</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Sarah Amelia Agustin</h3>
+                <p class="text-sm text-gray-700">Bendahara 1</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Muhammad Azi A.</h3>
+                <p class="text-sm text-gray-700">Bendahara 2</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Hanif Al Ghifari</h3>
+                <p class="text-sm text-gray-700">Perlengkapan 1</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Zidane Hafizh Ali</h3>
+                <p class="text-sm text-gray-700">Perlengkapan 2</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Agung Satriawan</h3>
+                <p class="text-sm text-gray-700">Perlengkapan 3</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Hendra Ardiansyah</h3>
+                <p class="text-sm text-gray-700">Humas 1</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Afnan Hanif khoiruddin</h3>
+                <p class="text-sm text-gray-700">Humas 2</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Rasya Al Fahrizi</h3>
+                <p class="text-sm text-gray-700">Kebersihan Senin</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Danish Raditya Putra</h3>
+                <p class="text-sm text-gray-700">Kebersihan Selasa</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Muhammad Putra Munazat</h3>
+                <p class="text-sm text-gray-700">Kebersihan Rabu</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Wisnu Maulana Firzatulloh</h3>
+                <p class="text-sm text-gray-700">Kebersihan Kamis</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Zidane Syauqii Abdullah</h3>
+                <p class="text-sm text-gray-700">Kebersihan Jumat</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Badri Faiz Zaenal</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Bintang Aura Sava</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Fawwaz Arkana Rusli</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Fosky Abiddaud</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Ghany Musyafa</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Muhamad Nazran Risya A.</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Muhamad Rafli</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Muhamad Salim</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Muhammad Aliyasa</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Nadif Syahril Ibrand</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Raija Alfarizq</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Rasya Nur Ramadhan</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Risky Ferdiansyah</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Safi Achmad Abyakta G.</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+
+            <div class="member-card text-center p-4 rounded-lg">
+                <h3 class="font-semibold">Syahrul Fathan</h3>
+                <p class="text-sm text-gray-700">Anggota</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jadwal Pelajaran & Piket -->
+    <section id="schedule" class="mx-auto max-w-5xl px-4 py-8 scroll-mt-38">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+
+            <!-- Kiri: Jadwal Pelajaran -->
+            <div class="rounded-lg border border-red-200 bg-white p-6 text-center shadow-xl">
+                <h2 class="mb-3 text-3xl font-bold text-red-700">Jadwal Pelajaran</h2>
+                <!-- Panggil fungsi galeri openImagePopup(this.src) -->
+                <img src="assets/mapel.jpg" alt="Jadwal Pelajaran" onclick="openImagePopup(this.src)"
+                    class="mx-auto h-auto max-w-xs cursor-pointer rounded-lg shadow-md transition-transform duration-200 hover:scale-105">
+            </div>
+
+            <!-- Kanan: Jadwal Piket -->
+            <div class="rounded-lg border border-gray-300 bg-white p-6 text-center shadow-xl">
+                <h2 class="mb-3 text-3xl font-bold text-red-700">Jadwal Piket</h2>
+                <!-- Panggil fungsi galeri openImagePopup(this.src) -->
+                <img src="assets/piket.jpg" alt="Jadwal Piket" onclick="openImagePopup(this.src)"
+                    class="mx-auto h-auto max-w-xs cursor-pointer rounded-lg shadow-md transition-transform duration-200 hover:scale-105">
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Galeri Kegiatan -->
+    <section id="gallery" class="galeri-section scroll-mt-38">
+        <h2 class="judul-galeri"><i class="fas fa-image"></i> Galeri Kegiatan</h2>
+        <div class="galeri-grid">
+            <img src="assets/galeri/galeri1.jpg" alt="Kegiatan 1" onclick="openImagePopup(this.src)">
+            <img src="assets/galeri/galeri2.jpg" alt="Kegiatan 2" onclick="openImagePopup(this.src)">
+            <img src="assets/galeri/galeri3.jpg" alt="Kegiatan 3" onclick="openImagePopup(this.src)">
+        </div>
+    </section>
+
+    <!-- Popup Gambar -->
+    <div id="image-popup" class="popup hidden">
+        <span class="close-btn" onclick="closeImagePopup()">&times;</span>
+        <img id="popup-img" src="" alt="Popup Gambar">
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact py-16 bg-rose-50 scroll-mt-38" id="contact">
+        <h2 class="text-3xl font-bold text-center mb-10 text-red-700">Get In Touch</h2>
+
+        <div
+            class="contact-container flex flex-col md:flex-row justify-center items-start gap-10 md:gap-20 max-w-7xl mx-auto px-4">
+
+            <!-- FORM -->
+            <div class="contact-form w-full md:w-3/5 lg:w-[700px] xl:w-[800px] p-10 rounded-xl shadow-lg bg-[#e84e4e]">
+                <form id="contact-form" onsubmit="sendToWA(event)">
+                    <div class="form-group font-bold text-yellow-400 mb-4">
+                        <label for="name" class="block mb-1">NAME</label>
+                        <input type="text" id="name" name="name" required placeholder="Nama Lengkap"
+                            class="w-full border-none bg-rose-200 rounded px-3 py-2 focus:ring-2 focus:ring-yellow-400 outline-none" />
+                    </div>
+                    <div class="form-group mb-4 font-bold text-yellow-400">
+                        <label for="contact_info" class="mb-1 block">EMAIL / NO. WHATSAPP</label>
+                        <input type="text" id="contact_info" name="contact_info" required
+                            placeholder="nama@email.com / 08123456789"
+                            class="w-full rounded border-none bg-rose-200 px-3 py-2 text-gray-800 outline-none focus:ring-2 focus:ring-yellow-400" />
+                    </div>
+                    <div class="form-group font-bold text-yellow-400 mb-4">
+                        <label for="message" class="block mb-1">MESSAGE</label>
+                        <textarea id="message" name="message" required
+                            placeholder="Tulis pesan atau saran kamu di sini..."
+                            class="w-full border-none bg-rose-200 rounded px-3 py-2 h-32 focus:ring-2 focus:ring-yellow-400 outline-none"></textarea>
+                    </div>
+                    <div class="flex justify-center md:justify-start">
+                        <button type="submit"
+                            class="button bg-red-600 text-yellow-300 font-bold px-6 py-2 rounded hover:bg-red-700 transition">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- INFO (Connect With Us) -->
+            <div class="contact-info w-full md:w-2/5 lg:w-[300px] self-start">
+                <h3 class="text-2xl font-semibold mb-6 text-orange-700 text-center md:text-left">
+                    Connect With Us
+                </h3>
+
+                <div class="space-y-8">
+                    <!-- Instagram -->
+                    <div class="info-item flex gap-4 items-center">
+                        <div class="info-icon transform transition-transform duration-300 hover:scale-110 hover:rotate-6
+                bg-gradient-to-br from-yellow-500 via-orange-600 to-red-700 rounded-full p-3
+                text-white text-3xl flex items-center justify-center">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4 class="font-bold text-orange-600 mb-1">Instagram</h4>
+                            <p>
+                                <a href="https://instagram.com/classofshiqi" target="_blank"
+                                    class="text-blue-600 hover:underline">@classofshiqi</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="info-item flex gap-4 items-center">
+                        <div class="info-icon transform transition-transform duration-300 hover:scale-110 hover:rotate-6
+                bg-gradient-to-br from-yellow-500 via-orange-600 to-red-700 rounded-full p-3
+                text-white text-3xl flex items-center justify-center">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4 class="font-bold text-orange-600 mb-1">Phone</h4>
+                            <p>
+                                <a href="https://wa.me/6285813651708" target="_blank"
+                                    class="text-blue-600 hover:underline">0858-1365-1708 (Adi Bastian)</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="info-item flex gap-4 items-center">
+                        <div class="info-icon transform transition-transform duration-300 hover:scale-110 hover:rotate-6
+                bg-gradient-to-br from-yellow-500 via-orange-600 to-red-700 rounded-full p-3
+                text-white text-3xl flex items-center justify-center">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4 class="font-bold text-orange-600 mb-1">Email</h4>
+                            <p>
+                                <a href="mailto:support@classofshiqi.web.id"
+                                    class="text-blue-600 hover:underline">support@classofshiqi.web.id</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="info-item flex gap-4 items-start">
+                        <div class="info-icon transform transition-transform duration-300 hover:scale-110 hover:rotate-6
+                bg-gradient-to-br from-yellow-500 via-orange-600 to-red-700 rounded-full p-3
+                text-white text-3xl flex items-center justify-center" style="aspect-ratio: 1 / 1;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4 class="font-bold text-orange-600 mb-1">Location</h4>
+                            <p>
+                                <a href="https://maps.app.goo.gl/pu1tRXbGuUwvNNWK8" target="_blank"
+                                    class="text-blue-600 hover:underline">
+                                    Jl. Akses UI No.89, RW.1, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat 16451
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Script Kirim WA Langsung via Fonnte API -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async function (e) {
+            e.preventDefault(); // cegah reload
+
+            // Tampilkan loading popup
+            Swal.fire({
+                title: 'Mengirim Pesan...',
+                text: 'Mohon tunggu sebentar',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+            // Ambil nilai input dari form
+            const name = document.getElementById('name').value;
+            const contactInfo = document.getElementById('contact_info').value; // Mengambil Email / No. WA
+            const message = document.getElementById('message').value;
+
+            // Token dari Dashboard Fonnte
+            const token = "pcvxo6pKrutyuofRNAc3";
+
+            // Ambil tanggal dan waktu saat ini (Format Indonesia)
+            const now = new Date();
+            const dateTimeString = now.toLocaleString('id-ID', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            }).replace('.', ':');
+
+            // Format pesan dengan tambahan tanggal & waktu
+            const messageText = `📩 *ADA PESAN BARU DARI WEBSITE KELAS*\n\n` +
+                `*Tanggal:* ${dateTimeString} WIB\n` +
+                `*Nama:* ${name}\n` +
+                `*Kontak:* ${contactInfo}\n` +
+                `*Pesan:* ${message}`;
+
+            try {
+                const response = await fetch('https://api.fonnte.com/send', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': token,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        target: '120363413394698039@g.us', // ⚠️ GANTI DENGAN ID GRUP WA KAMU DARI FONNTE
+                        message: messageText
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.status) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Berhasil Dikirim!',
+                        text: 'Pesan kamu sudah terkirim ke Admin.',
+                        confirmButtonColor: '#d33'
+                    });
+                    this.reset(); // Kosongkan form
+                } else {
+                    throw new Error(result.reason || 'Gagal mengirim pesan.');
+                }
+            } catch (error) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Gagal Mengirim!',
+                    text: error.message || 'Terjadi kesalahan koneksi.',
+                    confirmButtonColor: '#d33'
+                });
+            }
+        });
+    </script>
+
+
+    <footer class="text-center py-6 bg-red-800">
+        <p>© 2025 XII TKJ 5 SMK Harapan Bangsa | Jl. Akses UI No.89, RW.1, Tugu, Kec. Cimanggis, Kota Depok,
+            Jawa Barat
+            16451</p>
+    </footer>
+
+    <audio id="bgMusic" autoplay loop muted>
+        <source src="assets/music.mp3" type="audio/mp3">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <script src="script.js"></script>
+
+    <script>
+        const music = document.getElementById("bgMusic");
+
+        // 1. MENGATUR VOLUME DI SINI: Volume 20% (0.2)
+        music.volume = 0.2;
+
+        // Skrip untuk mencoba me-unmute musik setelah interaksi pengguna (tetap dipertahankan)
+        document.addEventListener('click', () => {
+            if (music.muted) {
+                music.muted = false;
+                // Coba putar ulang jika tadinya diblokir
+                music.play().catch(e => console.log("Autoplay unmuted failed:", e));
+            }
+        }, { once: true });
+
+        // LOGIKA KONTROL MUSIK SAAT PERUBAHAN VISIBILITAS TAB
+        document.addEventListener('visibilitychange', () => {
+            // Cek apakah halaman sekarang tersembunyi (hidden)
+            if (document.hidden) {
+                // Jika tersembunyi, PAUSE musik
+                music.pause();
+            } else {
+                // Jika kembali terlihat, PLAY musik
+                music.play().catch(e => {
+                    console.log("Failed to play music upon tab focus:", e);
+                });
+            }
+        });
+
+        // FUNGSI REVEAL
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+
+</body>
+
+</html>

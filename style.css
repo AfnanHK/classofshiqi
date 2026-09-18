@@ -1,0 +1,529 @@
+/* === style.css - Tema China (Festival Style) === */
+
+/* Warna utama */
+:root {
+    --primary: #b91c1c;
+    /* merah tua */
+    --secondary: #facc15;
+    /* emas */
+    --bg-dark: #1a1a1a;
+}
+
+/* Dasar */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff5f5;
+    font-family: "Noto Serif SC", serif;
+    color: #3b0a0a;
+}
+
+/* Dark mode */
+.dark body {
+    background: var(--bg-dark);
+    color: #fce7f3;
+}
+
+/* Header */
+header {
+    background-color: rgba(185, 28, 28, 0.9);
+    border-bottom: 3px solid var(--secondary);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-family: "Ma Shan Zheng", cursive;
+    letter-spacing: 1px;
+    color: var(--secondary);
+}
+
+nav a {
+    color: #fff0f0;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--secondary);
+}
+
+/* Tombol Umum */
+button {
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-weight: bold;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Hero */
+#home {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1604311795833-c2d690e4a4d8?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+#home div {
+    position: relative;
+    z-index: 1;
+}
+
+#home h2 {
+    color: var(--secondary);
+    text-shadow: 0 0 10px #000;
+}
+
+#home p {
+    color: #fff;
+    font-style: italic;
+}
+
+/* Judul Section */
+section h2 {
+    color: var(--primary);
+    text-shadow: 0 0 3px #facc15;
+}
+
+/* Wali Kelas */
+.wali-kelas-container {
+    display: flex;
+    justify-content: center;
+}
+
+.wali-kelas .wali-card {
+    width: 250px;
+    max-width: 100%;
+}
+
+/* Card Anggota */
+.member-card {
+    background: linear-gradient(to bottom right, #ffe4e6, #fff);
+    border: 2px solid var(--primary);
+    box-shadow: 0 4px 10px rgba(185, 28, 28, 0.3);
+    transition: all 0.4s ease;
+}
+
+.member-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(185, 28, 28, 0.5);
+}
+
+/* Jadwal */
+#schedule table {
+    border: 2px solid var(--primary);
+}
+
+#schedule th {
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+/* Galeri */
+#gallery img {
+    border: 3px solid var(--secondary);
+    transition: transform 0.3s ease;
+}
+
+#gallery img:hover {
+    transform: scale(1.08);
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: var(--secondary);
+    border-top: 3px solid var(--secondary);
+}
+
+/* Lentera */
+.lantern {
+    position: fixed;
+    top: -100px;
+    width: 80px;
+    height: 120px;
+    background: url('https://i.ibb.co/7VVYc2v/lentera.png') no-repeat center/contain;
+    animation: swing 4s ease-in-out infinite;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+@keyframes swing {
+
+    0%,
+    100% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+}
+
+/* Efek Muncul Scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==============================
+    CONTACT SECTION
+    ============================== */
+.contact {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* FORM */
+.contact-form {
+    background: rgba(213, 56, 56, 0.88);
+    border: 1px solid rgba(255, 94, 0, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    width: 90%;
+    margin: 0 auto;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1024px) {
+    .contact-form {
+        max-width: 800px;
+        width: 70%;
+        padding: 50px;
+        background: rgba(213, 56, 56, 0.92);
+    }
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-weight: bolder;
+    display: block;
+    margin-bottom: 10px;
+    color: #cc3333;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-shadow:
+        1px 1px 0 #ffcc00,
+        -1px -1px 0 #ffcc00,
+        1px -1px 0 #ffcc00,
+        -1px 1px 0 #ffcc00;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgb(232, 192, 192);
+    border: 1px solid rgba(255, 94, 0, 0.3);
+    color: #3b0a0a;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff5e00;
+    box-shadow: 0 0 20px rgba(255, 94, 0, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Tombol Submit */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #cc3333, #ffcc00);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', monospace;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 94, 0, 0.5);
+}
+
+/* Info Contact */
+.contact-info {
+    width: 90%;
+    margin: 30px auto 0 auto;
+    padding: 20px;
+}
+
+.contact-info h3 {
+    font-weight: bolder;
+    font-family: 'Orbitron', monospace;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #cc3333, #ffcc00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info-item {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(1deg, #cc3333, #ffcc00);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.info-details h4 {
+    color: #ff5e00;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.info-details p {
+    opacity: 0.8;
+}
+
+/* MAP */
+.map-container {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 94, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.map-placeholder {
+    text-align: center;
+    opacity: 0.6;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 40%, rgba(255, 94, 0, 0.1) 50%, transparent 60%);
+    animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Tombol Uiverse */
+.button {
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    background-color: #cc3333;
+    color: #ffcc00;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+    display: block;
+    margin: 15px auto 0 auto;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+/* === GALERI KEGIATAN (POPUP + ANIMASI) === */
+.galeri-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff5f5;
+}
+
+.judul-galeri {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Grid Galeri - versi flex agar baris terakhir center */
+.galeri-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Baris terakhir otomatis tengah */
+    gap: 20px;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.galeri-grid img {
+    flex: 1 1 280px;
+    /* Minimal lebar tiap gambar */
+    max-width: 280px;
+    height: 230px;
+    object-fit: cover;
+    border: 4px solid var(--secondary);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(185, 28, 28, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.galeri-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(185, 28, 28, 0.5);
+}
+
+/* Responsif - Tablet */
+@media (max-width: 768px) {
+    .galeri-grid img {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+/* Responsif - HP */
+@media (max-width: 480px) {
+    .galeri-grid img {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Popup Gambar */
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95);
+    transition: all 0.4s ease;
+    z-index: 999;
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.popup img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s, color 0.3s;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg);
+    color: var(--secondary);
+}
+
+.hidden {
+    display: none;
+}
