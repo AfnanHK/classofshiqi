@@ -67,55 +67,44 @@
 
     <header class="fixed w-full shadow z-50 bg-red-800">
         <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <!-- Logo -->
             <h1 class="text-2xl font-bold text-yellow-400">十二 TKJ 五</h1>
 
-            <!-- Tombol Garis Tiga (Hanya muncul di Layar HP) -->
-            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            <!-- Tombol Garis Tiga (Muncul di HP) -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none p-1 rounded hover:bg-red-700">
+                <svg class="w-7 h-7 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
                 </svg>
             </button>
 
-            <!-- Menu Desktop (Hanya muncul di Layar Laptop/Desktop) -->
-            <nav class="hidden md:flex space-x-4">
-                <a href="#home" class="text-white hover:text-yellow-300">Beranda</a>
-                <a href="#about" class="text-white hover:text-yellow-300">Tentang</a>
-                <a href="#members" class="text-white hover:text-yellow-300">Anggota</a>
-                <a href="#schedule" class="text-white hover:text-yellow-300">Jadwal</a>
-                <a href="#gallery" class="text-white hover:text-yellow-300">Galeri</a>
-                <a href="#contact" class="text-white hover:text-yellow-300">Kontak</a>
+            <!-- Menu Desktop (Menggunakan class desktop-nav) -->
+            <nav class="desktop-nav space-x-6">
+                <a href="#home" class="text-white hover:text-yellow-300 font-medium">Beranda</a>
+                <a href="#about" class="text-white hover:text-yellow-300 font-medium">Tentang</a>
+                <a href="#members" class="text-white hover:text-yellow-300 font-medium">Anggota</a>
+                <a href="#schedule" class="text-white hover:text-yellow-300 font-medium">Jadwal</a>
+                <a href="#gallery" class="text-white hover:text-yellow-300 font-medium">Galeri</a>
+                <a href="#contact" class="text-white hover:text-yellow-300 font-medium">Kontak</a>
             </nav>
         </div>
 
-        <!-- Mobile menu dengan Card/Box Style, Shadow, dan Border -->
+        <!-- Dropdown Mobile -->
         <div id="mobile-menu" class="hidden md:hidden bg-red-900 shadow-2xl">
             <div class="px-4 py-3 flex flex-col space-y-1 divide-y divide-red-800">
                 <a href="#home"
-                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300 transition-all duration-200">
-                    Beranda
-                </a>
+                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300">Beranda</a>
                 <a href="#about"
-                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300 transition-all duration-200">
-                    Tentang
-                </a>
+                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300">Tentang</a>
                 <a href="#members"
-                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300 transition-all duration-200">
-                    Anggota
-                </a>
+                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300">Anggota</a>
                 <a href="#schedule"
-                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300 transition-all duration-200">
-                    Jadwal
-                </a>
+                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300">Jadwal</a>
                 <a href="#gallery"
-                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300 transition-all duration-200">
-                    Galeri
-                </a>
+                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300">Galeri</a>
                 <a href="#contact"
-                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300 transition-all duration-200">
-                    Kontak
-                </a>
+                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300">Kontak</a>
             </div>
         </div>
     </header>
@@ -570,7 +559,7 @@
                 // Coba putar ulang jika tadinya diblokir
                 music.play().catch(e => console.log("Autoplay unmuted failed:", e));
             }
-        }, {once: true});
+        }, { once: true });
 
         // LOGIKA KONTROL MUSIK SAAT PERUBAHAN VISIBILITAS TAB
         document.addEventListener('visibilitychange', () => {

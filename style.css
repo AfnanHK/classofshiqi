@@ -527,3 +527,20 @@ footer {
 .hidden {
     display: none;
 }
+
+/* Sembunyikan menu desktop secara default di HP */
+.desktop-nav {
+    display: none;
+}
+
+/* Paksa tampilkan menu desktop secara mendatar saat layar berukuran tablet/laptop ke atas (>= 768px) */
+@media (min-width: 768px) {
+    .desktop-nav {
+        display: flex !important;
+    }
+}
+
+section,
+div[id] {
+    scroll-margin-top: 80px;
+}
