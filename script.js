@@ -22,6 +22,33 @@ window.addEventListener("scroll", () => {
     });
 });
 
+// Tombol Garis Tiga Mobile
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            // Toggle tersembunyi / tampil
+            mobileMenu.classList.toggle('hidden');
+            // Toggle border hanya saat menu terbuka
+            mobileMenu.classList.toggle('border-b-4');
+            mobileMenu.classList.toggle('border-yellow-400');
+        });
+    }
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (mobileMenu) {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('border-b-4', 'border-yellow-400');
+            }
+        });
+    });
+});
+
 // ⬆️ Tombol kembali ke atas
 const scrollBtn = document.createElement("div");
 scrollBtn.id = "scrollTopBtn";

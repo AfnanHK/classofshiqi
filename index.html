@@ -4,6 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 1. JUDUL & DESKRIPSI UTAMA (Muncul di Hasil Pencarian Google) -->
+    <title>XII TKJ 5 - Website Resmi Kelas XII TKJ 5</title>
+    <meta name="description"
+        content="Website resmi kelas XII TKJ 5. Informasi seputar jadwal pelajaran, daftar anggota kelas, galeri kegiatan, dan kontak.">
+    <meta name="keywords" content="XII TKJ 5, TKJ 5, classofshiqi, Website Kelas, TKJ">
+    <meta name="author" content="XII TKJ 5">
+
+    <!-- 2. FAVICON / LOGO (Icon kecil bulat di samping nama website di Google) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon.png">
+    <link rel="apple-touch-icon" href="assets/icon.png">
+
+    <!-- 3. STYLESHEET & FONTS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,37 +25,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon.png">
+
+    <!-- 4. SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 
-
-    <!-- Open Graph (agar ada gambar saat link dishare) -->
-    <!-- HTML Meta Tags -->
-    <title>XII TKJ 5</title>
-    <meta name="description" content="Website Kelas XII TKJ 5">
-
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://www.classofshiqi.web.id">
+    <!-- 5. OPEN GRAPH / FACEBOOK / WHATSAPP PREVIEW -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="XII TKJ 5">
-    <meta property="og:description" content="Website Kelas XII TKJ 5">
-    <meta property="og:image"
-        content="https://opengraph.b-cdn.net/production/images/76feac90-81fe-46c1-830f-06068d419358.png?token=p9jdifnHhh8l8oDiKesHQ5_WirHsLlXzSg3SHEa2WlI&height=630&width=1200&expires=33298253954">
+    <meta property="og:url" content="https://www.classofshiqi.web.id">
+    <meta property="og:title" content="XII TKJ 5 - Website Resmi Kelas XII TKJ 5">
+    <meta property="og:description"
+        content="Website resmi kelas XII TKJ 5. Informasi jadwal, anggota kelas, galeri kegiatan, dan kontak.">
+    <meta property="og:image" content="https://www.classofshiqi.web.id/assets/preview.jpg">
 
-    <!-- Twitter Meta Tags -->
+    <!-- 6. TWITTER CARD PREVIEW -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="classofshiqi.web.id">
     <meta property="twitter:url" content="https://www.classofshiqi.web.id">
-    <meta name="twitter:title" content="XII TKJ 5">
-    <meta name="twitter:description" content="Website Kelas XII TKJ 5">
-    <meta name="twitter:image"
-        content="https://opengraph.b-cdn.net/production/images/76feac90-81fe-46c1-830f-06068d419358.png?token=p9jdifnHhh8l8oDiKesHQ5_WirHsLlXzSg3SHEa2WlI&height=630&width=1200&expires=33298253954">
-
-    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-
-    <!-- Untuk WhatsApp & Browser -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="XII TKJ 5 - Website Resmi Kelas XII TKJ 5">
+    <meta name="twitter:description"
+        content="Website resmi kelas XII TKJ 5. Informasi jadwal, anggota kelas, galeri kegiatan, dan kontak.">
     <meta name="twitter:image" content="https://www.classofshiqi.web.id/assets/preview.jpg">
+
+    <!-- 7. STRUCTURED DATA (JSON-LD) - Membantu Google Mengenali Nama & Logo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "XII TKJ 5",
+      "alternateName": "Class of Shiqi",
+      "url": "https://www.classofshiqi.web.id",
+      "publisher": {
+        "@type": "Organization",
+        "name": "XII TKJ 5",
+        "logo": "https://www.classofshiqi.web.id/assets/icon.png"
+      }
+    }
+    </script>
 </head>
 
 <body class="bg-red-50 text-gray-900 font-sans overflow-x-hidden">
@@ -50,7 +69,17 @@
         <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
             <h1 class="text-2xl font-bold text-yellow-400">十二 TKJ 五</h1>
 
-            <nav class="space-x-4 md:block">
+            <!-- Tombol Garis Tiga (Hanya muncul di Layar HP) -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Menu Desktop (Hanya muncul di Layar Laptop/Desktop) -->
+            <nav class="hidden md:flex space-x-4">
                 <a href="#home" class="text-white hover:text-yellow-300">Beranda</a>
                 <a href="#about" class="text-white hover:text-yellow-300">Tentang</a>
                 <a href="#members" class="text-white hover:text-yellow-300">Anggota</a>
@@ -58,6 +87,36 @@
                 <a href="#gallery" class="text-white hover:text-yellow-300">Galeri</a>
                 <a href="#contact" class="text-white hover:text-yellow-300">Kontak</a>
             </nav>
+        </div>
+
+        <!-- Mobile menu dengan Card/Box Style, Shadow, dan Border -->
+        <div id="mobile-menu" class="hidden md:hidden bg-red-900 shadow-2xl">
+            <div class="px-4 py-3 flex flex-col space-y-1 divide-y divide-red-800">
+                <a href="#home"
+                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300 transition-all duration-200">
+                    Beranda
+                </a>
+                <a href="#about"
+                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300 transition-all duration-200">
+                    Tentang
+                </a>
+                <a href="#members"
+                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300 transition-all duration-200">
+                    Anggota
+                </a>
+                <a href="#schedule"
+                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300 transition-all duration-200">
+                    Jadwal
+                </a>
+                <a href="#gallery"
+                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300 transition-all duration-200">
+                    Galeri
+                </a>
+                <a href="#contact"
+                    class="mobile-link text-white font-medium py-2.5 px-3 rounded-lg hover:bg-red-800 hover:text-yellow-300 transition-all duration-200">
+                    Kontak
+                </a>
+            </div>
         </div>
     </header>
 
@@ -511,7 +570,7 @@
                 // Coba putar ulang jika tadinya diblokir
                 music.play().catch(e => console.log("Autoplay unmuted failed:", e));
             }
-        }, { once: true });
+        }, {once: true});
 
         // LOGIKA KONTROL MUSIK SAAT PERUBAHAN VISIBILITAS TAB
         document.addEventListener('visibilitychange', () => {
